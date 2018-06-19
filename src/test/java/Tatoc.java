@@ -44,8 +44,8 @@ public class Tatoc {
         Assert.assertEquals(this.web.findElement(By.id("answer")).isDisplayed(), true); //check whether frame is displayed or not
 
         String box1 = web.findElement(By.id("answer")).getAttribute("class");// get first box color
-
-        while (true) {
+        int n=0;
+        while (n==0) {
 
             web.findElement(By.cssSelector("a")).click(); //click on repaint box 2
             web.switchTo().frame("child"); //goto child for box2
@@ -53,7 +53,7 @@ public class Tatoc {
             web.switchTo().parentFrame(); //goback to parent form for repainting box
             if (box1.equals(box2)) {
                 web.findElements(By.cssSelector("a")).get(1).click(); //clicking on proceed
-                break;
+                n=1;
             }
         }
 
