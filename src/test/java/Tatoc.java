@@ -101,7 +101,7 @@ public class Tatoc {
 
         web.switchTo().window(parentWindowHandler);  // switch back to parent window
         web.findElements(By.cssSelector("a")).get(1).click(); //click on proceed
-        String expectedUrl = "http://10.0.1.86/tatoc/basic/cookie#"; //url of next page
+        String expectedUrl = "http://10.0.1.86/tatoc/basic/cookie"; //url of next page
         Assert.assertEquals(expectedUrl, web.getCurrentUrl(), "Didn't navigate to correct webpage");
 
     }
