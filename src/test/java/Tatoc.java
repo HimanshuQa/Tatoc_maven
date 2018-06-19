@@ -66,7 +66,6 @@ public class Tatoc {
     public void drag() {
         Actions actions = new Actions(web);
 
-        web.get("http://10.0.1.86/tatoc/basic/drag");
         Assert.assertEquals(this.web.findElement(By.id("dropbox")).isDisplayed(), true); //check whether dropbox is displayed or not
         Assert.assertEquals(this.web.findElement(By.id("dragbox")).isDisplayed(), true); //check whether dragbox is displayed or not
 
